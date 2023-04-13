@@ -1,6 +1,11 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import SelectedLevelProvider from '@/contexts/level-context';
+import '@/styles/globals.css';
+import type { AppProps } from 'next/app';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+    return (
+        <SelectedLevelProvider>
+            <Component {...pageProps} />
+        </SelectedLevelProvider>
+    );
 }
