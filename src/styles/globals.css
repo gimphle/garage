@@ -62,6 +62,8 @@ sub {
     display: flex;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
+    word-wrap: break-word;
     gap: 0.5rem;
 }
 
@@ -88,4 +90,27 @@ sub {
 
 .g-5 {
     gap: 0.5rem;
+}
+
+.px-2r {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.py-2r {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+    .df-fxdr-jcc {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 2.5rem;
+    }
 }

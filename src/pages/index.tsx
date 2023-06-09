@@ -22,15 +22,15 @@ const Home = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className={classNames(inter.className, 'df-fxdc-aic')}>
+            <main className={classNames(inter.className, 'df-fxdc-aic', 'px-2r')}>
                 <h1>Parking Management</h1>
 
                 <div className="df-fxdr-jcc">
-                    <section>
+                    <section className="px-2r">
                         <LevelDropdown value={selectedLevel} onChange={setSelectedLevelInInput} />
                         <ParkingList />
                     </section>
-                    <section className="sticky">
+                    <section className="sticky bg-white py-2r px-2r">
                         <FormGarage />
                         {selectedLevel && <FormVehicle />}
                     </section>

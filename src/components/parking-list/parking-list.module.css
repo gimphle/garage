@@ -82,3 +82,15 @@
 .parkingSpace input {
     width: 100%;
 }
+
+@media only screen and (max-width: 768px) {
+    .parkingList {
+        grid-template-columns: repeat(2, 208px);
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .parkingList {
+        grid-template-columns: repeat(1, 208px);
+    }
+}
