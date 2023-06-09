@@ -14,7 +14,7 @@ export const validateInput = <T extends object>(object: T): boolean => {
     const objectKeys = Object.keys(object);
 
     for (const key of objectKeys) {
-        if (!object[key as keyof T] || object[key as keyof T] <= 0) {
+        if (!object[key as keyof T] || (object[key as keyof T] as number) <= 0) {
             alert(`Validation error!\nInput of field ${key} is invalid`);
             return false;
         }
